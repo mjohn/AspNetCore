@@ -2,7 +2,6 @@
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
 using System;
-using System.Globalization;
 using System.Threading.Tasks;
 
 namespace Microsoft.AspNetCore.Components
@@ -23,6 +22,27 @@ namespace Microsoft.AspNetCore.Components
         public static string GetValue(DateTime value, string format) =>
             value == default ? null
             : (format == null ? value.ToString() : value.ToString(format));
+
+        /// <summary>
+        /// Not intended to be used directly.
+        /// </summary>
+        public static string GetValue(DateTime? value, string format) =>
+            value == default ? null
+            : (format == null ? value.ToString() : value.Value.ToString(format));
+
+        /// <summary>
+        /// Not intended to be used directly.
+        /// </summary>
+        public static string GetValue(DateTimeOffset value, string format) =>
+            value == default ? null
+            : (format == null ? value.ToString() : value.ToString(format));
+
+        /// <summary>
+        /// Not intended to be used directly.
+        /// </summary>
+        public static string GetValue(DateTimeOffset? value, string format) =>
+            value == default ? null
+            : (format == null ? value.ToString() : value.Value.ToString(format));
 
         /// <summary>
         /// Not intended to be used directly.
