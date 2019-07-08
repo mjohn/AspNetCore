@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components.Layouts;
 using Microsoft.AspNetCore.Components.RenderTree;
 
 namespace Microsoft.AspNetCore.Components.Routing
@@ -34,7 +33,7 @@ namespace Microsoft.AspNetCore.Components.Routing
         /// assemblies, for components matching the URI.
         /// </summary>
         [Parameter] public Assembly AppAssembly { get; private set; }
-        
+
         /// <summary>
         /// Gets or sets the type of the component that should be used as a fallback when no match is found for the requested route.
         /// </summary>
